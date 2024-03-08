@@ -829,7 +829,10 @@ export interface ApiServiceService extends Schema.CollectionType {
   attributes: {
     title: Attribute.String;
     slug: Attribute.UID<'api::service.service', 'title'>;
-    description: Attribute.Text;
+    description: Attribute.Text &
+      Attribute.SetMinMaxLength<{
+        maxLength: 350;
+      }>;
     icon: Attribute.Media;
     serviceDetails: Attribute.DynamicZone<
       [

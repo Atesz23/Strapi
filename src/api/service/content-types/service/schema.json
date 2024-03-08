@@ -20,7 +20,8 @@
       "targetField": "title"
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "maxLength": 350
     },
     "icon": {
       "type": "media",
